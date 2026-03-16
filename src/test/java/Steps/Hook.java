@@ -22,8 +22,8 @@ public class Hook {
             options.addArguments("--headless"); // Mode sans interface graphique
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
-            WebDriver driver = new ChromeDriver(options);
             WebDriverManager.chromedriver().setup();
+            WebDriver driver = new ChromeDriver(options);
             //driver = new ChromeDriver();
             driver.manage().window().maximize();
         }
