@@ -1,0 +1,16 @@
+name: Selenium Java Tests
+on:
+  workflow_dispatch: # Important : permet à n8n de déclencher le test
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Demo Step
+        run: echo "Le moteur Java est prêt et n8n a bien déclenché le test !"
