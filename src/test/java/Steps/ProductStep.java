@@ -20,8 +20,8 @@ import java.time.Duration;
 
 public class ProductStep {
 
-    //WebDriver driver =Hook.driver;
-    WebDriver driver ;
+    WebDriver driver =Hook.driver;
+    //WebDriver driver ;
     LoginPage loginpage ;
     ProductPage productPage;
     ProductPage2 productPage2;
@@ -29,9 +29,9 @@ public class ProductStep {
 
     @Given("je suis sur la page dacceuil")
     public void je_suis_sur_la_page_dacceuil() {
-        driver=new ChromeDriver();
-       driver.manage().window().maximize();
-        //this.driver=Hook.driver;
+        //driver=new ChromeDriver();
+       //driver.manage().window().maximize();
+        this.driver=Hook.driver;
         loginpage=new LoginPage(driver);
         driver.get("https://www.saucedemo.com/");
         loginpage.enterusername("standard_user");

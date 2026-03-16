@@ -8,6 +8,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Hook {
 
@@ -17,8 +18,13 @@ public class Hook {
     @Before
     public void setup() {
         if (driver == null) {
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless"); // Mode sans interface graphique
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            WebDriver driver = new ChromeDriver(options);
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            //driver = new ChromeDriver();
             driver.manage().window().maximize();
         }
     }
