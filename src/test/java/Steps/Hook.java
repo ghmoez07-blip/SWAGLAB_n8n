@@ -19,13 +19,16 @@ public class Hook {
     public void setup() {
         if (driver == null) {
             ChromeOptions options = new ChromeOptions();
-            //options.addArguments("--headless"); // Mode sans interface graphique
             options.addArguments("--headless=new");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--window-size=1920,1080"); // Important pour OpenCV !
+
             WebDriverManager.chromedriver().setup();
-            WebDriver driver = new ChromeDriver(options);
-            //driver = new ChromeDriver();
+
+            // ✅ CORRECTION : On utilise la variable statique, on ne la redéclare pas
+            driver = new ChromeDriver(options);
+
             driver.manage().window().maximize();
         }
     }

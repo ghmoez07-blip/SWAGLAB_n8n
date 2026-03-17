@@ -20,8 +20,8 @@ import java.time.Duration;
 
 public class ProductStep {
 
-    WebDriver driver =Hook.driver;
-    //WebDriver driver ;
+    //WebDriver driver =Hook.driver;
+    WebDriver driver ;
     LoginPage loginpage ;
     ProductPage productPage;
     ProductPage2 productPage2;
