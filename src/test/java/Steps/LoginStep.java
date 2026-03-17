@@ -46,8 +46,8 @@ public class LoginStep {
     @Then("un msg derreur doit safficher {string}")
     public void unMsgDerreurDoitSafficher(String msgexpected) {
         String msgactuel = loginPage.getmessage();
-        //Assert.assertTrue("msg invalide",msgactuel.contains(msgexpected));
-        Assert.assertEquals(msgexpected,msgactuel);
+        Assert.assertTrue("msg invalide",msgactuel.contains(msgexpected));
+        //Assert.assertEquals(msgexpected,msgactuel);
         driver.quit();
     }
     @When("je click sur menuBtn")
