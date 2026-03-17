@@ -11,7 +11,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginStep {
-    WebDriver driver=Hook.driver ;
+    //WebDriver driver=Hook.driver ;
+    WebDriver driver ;
     LoginPage loginPage;
     LogoutPage logoutPage;
 

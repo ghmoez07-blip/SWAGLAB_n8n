@@ -1,8 +1,9 @@
 Feature: Tester la connexion au site "Swaglab"
-Background: Test Login avec les identifiants valides
+  @test
+  Scenario: Test Login avec les identifiants valides
 Given je suis sur la page Login
   When je saisi l'username "standard_user"
-  And je saisi le mot de passe "secret_sauce"
+  And je saisi le mot de passe "secret_sauceee"
   And je click sur le bouton Login
   Then redirection vers la page Home
 
