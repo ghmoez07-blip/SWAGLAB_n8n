@@ -22,5 +22,5 @@ import org.junit.runner.RunWith;
 
 )
 
-public class Run {
+public class TestRunner {
 }

@@ -141,5 +141,6 @@ public class ProductStep {
  public void lePrixTotalDesDeuxProduitsDoitEtreCorrect() {
         //System.out.println(+productPage.verifierCalculTotalDeuxProduits2());
   productPage.verifierCalculTotalDeuxProduits();
+
  }
 }
