@@ -1,12 +1,12 @@
 Feature: Tester la connexion au site "Swaglab"
-  @test
+
   Scenario: Test Login avec les identifiants valides
 Given je suis sur la page Login
   When je saisi l'username "standard_user"
   And je saisi le mot de passe "secret_sauce"
   And je click sur le bouton Login
   Then redirection vers la page Home
-
+@test
   Scenario Outline: Test login avec identifiants invalides
     Given je suis sur la page Login
     When je saisi l'username "<username>"
